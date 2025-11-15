@@ -23,20 +23,20 @@ def main():
     ### split in words
     ### count words
     ### write count words
-    write_count_words(counter)
+    
     # count the frequency of the words in the files in the input directory
     counter = {}
     for filename in input_files_list:
         with open("data/input/" + filename) as f:
             for l in f:
-                for´´ w in l.split():
+                for w in l.split():
                     w = w.lower().strip(",.!?")
                     counter[w] = counter.get(w, 0) + 1
 
     ###
     # create the directory output/ if it doesn't exist
 
-
+	write_count_words(counter)
 def write_count_words(counter):
     if not os.path.exists("data/output"):
         os.makedirs("data/output")
