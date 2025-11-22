@@ -1,8 +1,8 @@
-"""Entry point for the homework package."""
+"""Entry point for the homework wordcount module."""
 
-# python -m homework data/input data/output
+# python3 -m homework data/input data/output
 
-from homework.src.wordcount import main
+from .src.wordcount import main
 
 if __name__ == "__main__":
     main()
